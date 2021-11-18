@@ -28,7 +28,7 @@ barra_lateral = st.sidebar.empty() # Instantiate a object sidebar
 features_select = st.sidebar.selectbox("Select a feature:", features)# Create a select box to get a columns name
 
 # Checkbox for capture boolean type if you want show the dataset
-carregar_dados = st.sidebar.checkbox('Load Data')
+load_datas = st.sidebar.checkbox('Load Data')
 
 ### Central elements from page
 # You need instantiate a st.empty() before for insert grafics in web app page.
@@ -52,7 +52,7 @@ try:
     grafico_histplot = st.plotly_chart(fig)
 
     # If want to show dataset
-    if carregar_dados:
+    if load_datas:
         st.subheader('Dados')
         dados = st.dataframe(df.head())
         stock_select = st.sidebar.selectbox
